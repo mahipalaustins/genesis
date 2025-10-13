@@ -734,6 +734,66 @@
             transform: translateX(5px);
         }
         
+        /* Rules Section Styles */
+        .rules-section {
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(10, 10, 13, 0.9));
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 60, 166, 0.2);
+        }
+        
+        .rule-item {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+        
+        .rule-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-neon), var(--accent-neon));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(255, 60, 166, 0.3);
+        }
+        
+        .rule-content {
+            flex-grow: 1;
+        }
+        
+        .rule-title {
+            font-family: 'Audiowide', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-neon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .rule-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .rule-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .rule-point-icon {
+            color: var(--accent-neon);
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
         /* Media Queries for Responsive Design */
         @media (min-width: 768px) {
             /* Tablet styles */
@@ -990,6 +1050,18 @@
             .mobile-timeline {
                 display: block !important;
             }
+            
+            /* Rules section mobile adjustments */
+            .rule-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .rule-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
         
         @media (max-width: 1023px) {
@@ -1037,6 +1109,7 @@
             <div class="desktop-nav hidden md:flex space-x-4 lg:space-x-8">
                 <a href="#hero" class="nav-item text-gray-300 hover:text-primary-neon transition-colors duration-300">Home</a>
                 <a href="#about" class="nav-item text-gray-300 hover:text-primary-neon transition-colors duration-300">About</a>
+                <a href="#rules" class="nav-item text-gray-300 hover:text-primary-neon transition-colors duration-300">Rules</a>
                 <a href="#register" class="nav-item text-gray-300 hover:text-primary-neon transition-colors duration-300">Register</a>
                 <a href="#timeline" class="nav-item text-gray-300 hover:text-primary-neon transition-colors duration-300">Timeline</a>
                 <a href="#team" class="nav-item text-gray-300 hover:text-primary-neon transition-colors duration-300">Team</a>
@@ -1058,6 +1131,7 @@
         </div>
         <a href="#hero" class="mobile-menu-item">Home</a>
         <a href="#about" class="mobile-menu-item">About</a>
+        <a href="#rules" class="mobile-menu-item">Rules</a>
         <a href="#register" class="mobile-menu-item">Register</a>
         <a href="#timeline" class="mobile-menu-item">Timeline</a>
         <a href="#team" class="mobile-menu-item">Team</a>
@@ -1168,6 +1242,125 @@
                 <div class="mt-12 md:mt-16 text-center">
                     <div class="inline-block bg-gradient-to-r from-primary-neon to-accent-neon text-dark-bg px-6 md:px-8 py-3 md:py-4 rounded-full font-bold heading-secondary text-lg md:text-xl">
                         #FromViceToVision
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rules Section -->
+    <section id="rules" class="py-16 md:py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12 text-center neon-text-primary heading-primary">
+                EVENT RULES
+            </h2>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="rules-section">
+                    <!-- Team Formation Rule -->
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-users text-dark-bg text-xl"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h3 class="rule-title">Team Formation</h3>
+                            <div class="rule-description">
+                                <div class="rule-point">
+                                    <i class="fas fa-check-circle rule-point-icon"></i>
+                                    <span>Minimum 1 and maximum 4 members per team.</span>
+                                </div>
+                                <div class="rule-point">
+                                    <i class="fas fa-check-circle rule-point-icon"></i>
+                                    <span>Only 25 teams will be selected to participate.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Discipline & Conduct Rule -->
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-handshake text-dark-bg text-xl"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h3 class="rule-title">Discipline & Conduct</h3>
+                            <div class="rule-description">
+                                <div class="rule-point">
+                                    <i class="fas fa-check-circle rule-point-icon"></i>
+                                    <span>Maintain proper discipline at all times.</span>
+                                </div>
+                                <div class="rule-point">
+                                    <i class="fas fa-exclamation-triangle rule-point-icon" style="color: var(--accent-neon);"></i>
+                                    <span>No fighting or misbehavior — violation will lead to immediate disqualification.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reporting Time Rule -->
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-clock text-dark-bg text-xl"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h3 class="rule-title">Reporting Time</h3>
+                            <div class="rule-description">
+                                <div class="rule-point">
+                                    <i class="fas fa-check-circle rule-point-icon"></i>
+                                    <span>Reporting time is 8:30 AM and is compulsory for all participants.</span>
+                                </div>
+                                <div class="rule-point">
+                                    <i class="fas fa-exclamation-triangle rule-point-icon" style="color: var(--accent-neon);"></i>
+                                    <span>Punctuality is mandatory; latecomers will face appropriate disciplinary action.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Structure Rule -->
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-calendar-alt text-dark-bg text-xl"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h3 class="rule-title">Event Structure</h3>
+                            <div class="rule-description">
+                                <div class="rule-point">
+                                    <i class="fas fa-check-circle rule-point-icon"></i>
+                                    <span>The event will include 2 mentoring rounds and 2 judging rounds.</span>
+                                </div>
+                                <div class="rule-point">
+                                    <i class="fas fa-exclamation-triangle rule-point-icon" style="color: var(--accent-neon);"></i>
+                                    <span>Attendance in all rounds is mandatory.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Judging & Fair Play Rule -->
+                    <div class="rule-item">
+                        <div class="rule-icon">
+                            <i class="fas fa-gavel text-dark-bg text-xl"></i>
+                        </div>
+                        <div class="rule-content">
+                            <h3 class="rule-title">Judging & Fair Play</h3>
+                            <div class="rule-description">
+                                <div class="rule-point">
+                                    <i class="fas fa-check-circle rule-point-icon"></i>
+                                    <span>Judges' decisions are final and binding.</span>
+                                </div>
+                                <div class="rule-point">
+                                    <i class="fas fa-exclamation-triangle rule-point-icon" style="color: var(--accent-neon);"></i>
+                                    <span>Teams must maintain originality, honesty, and fair play throughout the event.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-400 text-sm md:text-base">
+                            Organized by SIN Innovation Center, St. Austin's Sr. Sec. School
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1421,6 +1614,12 @@
         // Leaders data - REPLACE THE IMAGE FILENAMES WITH YOUR LOCAL IMAGE FILES
         const leaders = [
             {
+                name: "Dr. Vinod Purohit",
+                position: "Chairman",
+                description: "SIN Technologies",
+                image: "Vinod.jpg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
                 name: "Er. Harshvardhan Purohit",
                 position: "Founder and CEO",
                 description: "SIN Technologies",
@@ -1443,7 +1642,61 @@
                 position: "Supervisor",
                 description: "St. Austin's Sen. Sec. School",
                 image: "Hitsa.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
-            }
+            },
+            {
+                name: "Pushpendra Singh Gaur",
+                position: "Supervisor",
+                description: "St. Austin's Sen. Sec. School",
+                image: "Gaur.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Aditya Purohit",
+                position: "Manager",
+                description: "SIN Technologies",
+                image: "AP.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Varsha Ramdev  ",
+                position: "Brand Manager",
+                description: "SIN Technologies",
+                image: "Varsha.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Shreya Vyas",
+                position: "Core Member",
+                description: "SIN Technologies",
+                image: "Shreya.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Manas Parihar",
+                position: "Core Member",
+                description: "SIN Technologies",
+                image: "Manas.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Bhavya Sharma",
+                position: "Core Member",
+                description: "SIN Technologies",
+                image: "Bhavya.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+             {
+                name: "Chavi Shah",
+                position: "Core Member",
+                description: "SIN Technologies",
+                image: "Chavi.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Mohit Mehta",
+                position: "Core Member",
+                description: "SIN Technologies",
+                image: "Mohit.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
+            {
+                name: "Pragya Goyal",
+                position: "Core Member",
+                description: "SIN Technologies",
+                image: "PG.jpeg" // REPLACE WITH YOUR LOCAL IMAGE FILE
+            },
         ];
 
         // Participants data - REPLACE THE IMAGE FILENAMES WITH YOUR LOCAL IMAGE FILES
@@ -1456,7 +1709,7 @@
             { name: "Narayan Sharma", position: "Event Management", image: "Narayan.jpg" },
             { name: "Rakesh Solanki", position: "Event Management", image: "Rakesh.jpg" },
             { name: "Krishna Bhati", position: "Event Management", image: "Krishna.jpg" },
-            { name: "Saumya", position: "Marketing", image: "Saumya.jpg" },
+            { name: "Saumya Jatoliya", position: "Marketing", image: "Saumya.jpg" },
             { name: "Kuldeep Bishnoi", position: "Marketing", image: "Kuldeep.jpg" },
             { name: "Khushi Baheti", position: "Data Analyst", image: "Khushi.jpg" },
             { name: "Amrita Jodha", position: "Data Analyst", image: "Amrita.jpg" },
